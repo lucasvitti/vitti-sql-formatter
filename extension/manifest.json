@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Vitti SQL Formatter",
+  "version": "1.0.0",
+  "author": "Lucas Vitti",
+  "homepage_url": "https://identar.lucas.mat.br",
+  "description": "Format SQL in one click — river layout, leading commas, where 1=1, aligned aliases. Works on Databricks and any web editor.",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_title": "Vitti SQL Formatter",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "permissions": ["contextMenus", "clipboardRead", "clipboardWrite", "scripting", "activeTab", "storage"],
+  "background": { "service_worker": "background.js" },
+  "commands": {
+    "format-sql": {
+      "suggested_key": { "default": "Ctrl+Shift+Y", "mac": "Command+Shift+Y" },
+      "description": "Format selected / clipboard SQL (Vitti style)"
+    }
+  }
+}

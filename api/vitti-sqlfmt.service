@@ -1,0 +1,22 @@
+[Unit]
+Description=Vitti SQL Formatter API
+After=network.target
+
+[Service]
+Type=simple
+Environment=PORT=8787
+Environment=HOST=127.0.0.1
+WorkingDirectory=/opt/vitti-sqlfmt
+ExecStart=/usr/bin/node /opt/vitti-sqlfmt/server.js
+Restart=on-failure
+RestartSec=3
+User=www-data
+Group=www-data
+# hardening (stateless, writes nothing to disk; logs go to journald)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

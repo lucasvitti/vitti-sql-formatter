@@ -1,0 +1,15 @@
+# === Proprietary / internal — never publish ===
+exemplos_scripts/
+PROJECT_PAGE_BRIEF.md
+run-sql.ps1
+
+# === Build artifacts & generated intermediates (regenerable) ===
+extension/*.zip
+extension/store-assets/*frame*.html
+
+# === OS / editor cruft ===
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.swp
